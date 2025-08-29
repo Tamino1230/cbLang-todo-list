@@ -1,8 +1,8 @@
-# This is a task program written in [cbLang](https://github.com/Ceebox/cbLang)
-by [Tamino1230](https://github.com/Tamino1230/) fully writte in cdLang
+## This is a task program fully written in [cbLang](https://github.com/Ceebox/cbLang)
+by [Tamino1230](https://github.com/Tamino1230/)
 
 
-To run the program you need the cdLang "interpreter" here is a [cdLang interpreter direct download](https://github.com/Ceebox/cbLang/releases/download/0.1.2/cbLang.exe)
+To run the program you need the cbLang "interpreter" here is a [cbLang interpreter direct download](https://github.com/Ceebox/cbLang/releases/download/0.1.2/cbLang.exe)
 
 Then just run the program with `cblang.exe --run main.cb` (exe has to be in the same folder as `main.cb`) or if you put it in your environment path variable use `cblang --run main.cb`
 
@@ -42,4 +42,4 @@ if (index < 1 or index > task_len)
 // then pop out of list etc.
 ```
 
-### [cbLang by github.com/Ceebox/](https://github.com/Ceebox/)
+#### [cbLang by github.com/Ceebox/](https://github.com/Ceebox/)
