@@ -1,0 +1,39 @@
+
+from native reference time;
+from native reference os;
+
+class Handler()
+{
+    function getUserInput(prompt)
+    {
+        print(prompt);
+        return input().strip();
+    }
+
+    function sleep(milliseconds)
+    {
+        time.sleep(milliseconds / 1000);
+    }
+
+    function checkFolderAndFiles()
+    {
+        if not (os.path.exists("./tasks"))
+        {
+            print("Tasks directory does not exist");
+            os.mkdir("./tasks");
+        }
+
+        if not (os.path.exists("./tasks/tasks.txt"))
+        {
+            with open("./tasks/tasks.txt", "w") as f
+            {
+                f.write("");
+            }
+        }
+    }
+
+    function clearConsole()
+    {
+        os.system("cls");
+    }
+}

@@ -1,0 +1,69 @@
+
+class TaskManager()
+{
+    function Start()
+    {
+        this.file = "./tasks/tasks.txt";
+        this.tasks = this.getAllTasksFromFile();
+    }
+
+    function getAllTasksFromFile()
+    {
+        with open(this.file, "r") as f
+        {
+            content = f.read();
+            return content.split("\n");
+        }
+    }
+
+    function printAllTasks()
+    {
+        print("All Tasks:");
+        print("----------------");
+        i = 1;
+        for task in this.tasks
+        {
+            print(f"{str(i):^3}: " + task);
+            i += 1;
+        }
+        print("----------------");
+    }
+
+    function addTask(task)
+    {
+        this.tasks.append(task);
+        with open(this.file, "a") as f
+        {
+            f.write("\n" + task);
+        }
+    }
+
+    function removeTask(index)
+    {
+        // first check if is a number
+        if not (index.isdigit())
+        {
+            print("Invalid task ID");
+            return;
+        }
+
+        // if yes convert to int
+        index = int(index);
+
+        // check if index is valid
+        task_len = len(this.tasks);
+        if (index < 1 or index > task_len)
+        {
+            print("Invalid task ID");
+            return;
+        }
+
+        // if yes pop out of the list
+        index = index - 1;
+        this.tasks.pop(index);
+        with open(this.file, "w") as f
+        {
+            f.write("\n".join(this.tasks));
+        }
+    }
+}

@@ -1,0 +1,36 @@
+
+include tasks;
+include handler;
+
+class Main()
+{
+    function Main()
+    {
+        handler = Handler();
+        handler.checkFolderAndFiles();
+        taskManager = TaskManager();
+
+        //* program loop
+        while True:
+
+            // printing out all tasks
+            taskManager.printAllTasks();
+
+            // inputs
+            user_input = handler.getUserInput("Enter a command (add/remove/exit): ");
+            if user_input == "exit":
+                break;
+            elif user_input == "add":
+                task = handler.getUserInput("Enter the task description: ");
+                taskManager.addTask(task);
+            elif user_input == "remove":
+                task_id = handler.getUserInput("Enter the task ID to remove: ");
+                taskManager.removeTask(task_id);
+            else:
+                print("Invalid command");
+            
+            handler.sleep(1000);
+
+            handler.clearConsole();
+    }
+}
