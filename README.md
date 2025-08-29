@@ -1,6 +1,11 @@
-## This is a task program fully written in [cbLang](https://github.com/Ceebox/cbLang)
+# This is a task program fully written in [cbLang](https://github.com/Ceebox/cbLang)
 by [Tamino1230](https://github.com/Tamino1230/)
 
+## Setup Download
+Run `setup.py` and run it with admin and then enter `add` to install the language. By downloading it like this you can just doubleclick the main.cb file.
+Write `remove` to uninstall the file. The download path is: `C:\\Program Files\\cbLang`. The Setup will download everything automaticly!
+
+---
 
 To run the program you need the cbLang "interpreter" here is a [cbLang interpreter direct download](https://github.com/Ceebox/cbLang/releases/download/0.1.2/cbLang.exe)
 
@@ -11,9 +16,9 @@ Because i wasnt able to use dictionaries i couldnt use json files to save but a 
 Especially TRY and EXCEPT was kinda tricky because the programming language doesnt just let me do:
 ```
 try {
-    new = int(old_str)
+    new = int(old_str);
 } except {
-    pass
+    pass;
 }
 ```
 
