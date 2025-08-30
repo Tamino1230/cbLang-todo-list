@@ -18,7 +18,6 @@ my_dict = dict(a=1, b=2, c=3)
 print(my_dict) # {'a': 1, 'b': 2, 'c': 3}
 ```
 
-
 Especially TRY and EXCEPT was kinda tricky because the programming language doesnt just let me do:
 ```
 try {
@@ -28,7 +27,23 @@ try {
 }
 ```
 
-because the following error will accure `Missing semicolon in: try {` and i couldnt make it work in a single line, because then it will say: `Braces amount is not equal`
+because the following error will accure `Missing semicolon in: try {` and i couldnt make it work in a single line, because then it will say: `Braces amount is not equal`.
+Update: I could make an try/except with:
+```
+from contextlib import suppress
+
+s = "abc"
+with suppress(ValueError):
+    x = int(s)
+```
+```
+// or in cbLang
+from native reference contextlib;
+
+s = "abc"
+with contextlib.supress(ValueError):
+    x = int(s)
+```
 
 So except of try i used this:
 ```
