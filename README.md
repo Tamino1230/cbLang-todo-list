@@ -33,6 +33,7 @@ Update: I could make an try/except with:
 from contextlib import suppress
 
 s = "abc"
+x = None # if fails
 with suppress(ValueError):
     x = int(s)
 ```
@@ -41,6 +42,7 @@ with suppress(ValueError):
 from native reference contextlib;
 
 s = "abc"
+x = None // if fails
 with contextlib.supress(ValueError):
     x = int(s)
 ```
