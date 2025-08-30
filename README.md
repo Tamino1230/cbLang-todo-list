@@ -11,7 +11,13 @@ To run the program you need the cbLang "interpreter" here is a [cbLang interpret
 
 Then just run the program with `cblang.exe --run main.cb` (exe has to be in the same folder as `main.cb`) or if you put it in your environment path variable use `cblang --run main.cb`
 
-Because i wasnt able to use dictionaries i couldnt use json files to save but a txt file will do it too. This is a example for the cbLang Language, i got familiar with it. But it still has some bugs
+Because i wasnt able to use dictionaries i couldnt use json files to save but a txt file will do it too. This is a example for the cbLang Language, i got familiar with it. But it still has some bugs.
+Update: I could make a dict with to make it saving in json:
+```
+my_dict = dict(a=1, b=2, c=3)
+print(my_dict) # {'a': 1, 'b': 2, 'c': 3}
+```
+
 
 Especially TRY and EXCEPT was kinda tricky because the programming language doesnt just let me do:
 ```
